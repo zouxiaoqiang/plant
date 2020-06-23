@@ -1,51 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>plant</title>
+    <style>
+        .quarter-div {
+            float: left;
+            width: 49%;
+            border: 1px solid #c2c0c0;
+            margin: 2px;
+            height: 500px;
+        }
+
+    </style>
 </head>
+
 <body>
-<form action="" method="post">
+
+<div id="div_character" class="quarter-div">
+    <table>
+        <tr>
+            <form>
+                <button type="submit">检索</button>
+                <button type="submit">性状添加</button>
+                <button type="submit">物种编辑</button>
+            </form>
+        </tr>
+    </table>
     <div>
-        <ul>
-            <li>
-                <tr>
-                   <td>叶具齿</td>
-                    <td><input type="checkbox" name="leaf_name" value="叶具齿"></td>
-                </tr>
-            </li>
-            <li>
-                 <tr>
-                   <td>叶有毛</td>
-                    <td><input type="checkbox" name="leaf_name" value="叶有毛"></td>
-                </tr>
-            </li>
-            <li>
-                 <tr>
-                   <td>叶无毛</td>
-                    <td><input type="checkbox" name="leaf_name" value="叶无毛"></td>
-                </tr>
-            </li>
-        </ul>
+        <form action="" method="post">
+            <div>
+                <ul>
+                    <li>
+                        <tr>
+                            <td>叶具齿</td>
+                            <td><input type="checkbox" name="leaf_name" value="叶具齿"></td>
+                        </tr>
+                    </li>
+                    <li>
+                        <tr>
+                            <td>叶有毛</td>
+                            <td><input type="checkbox" name="leaf_name" value="叶有毛"></td>
+                        </tr>
+                    </li>
+                    <li>
+                        <tr>
+                            <td>叶无毛</td>
+                            <td><input type="checkbox" name="leaf_name" value="叶无毛"></td>
+                        </tr>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>
+                        <tr>
+                            <td>花单生</td>
+                            <td><input type="checkbox" name="flower_name" value="花单生"></td>
+                        </tr>
+                    </li>
+                    <li>
+                        <tr>
+                            <td>总状花序</td>
+                            <td><input type="checkbox" name="flower_name" value="总状花序"></td>
+                        </tr>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <input type="submit" value="筛选">
+            </div>
+        </form>
     </div>
-    <div>
-        <ul>
-            <li> <tr>
-                   <td>花单生</td>
-                    <td><input type="checkbox" name="flower_name" value="花单生"></td>
-                </tr>
-            </li>
-            <li>
-                 <tr>
-                   <td>总状花序</td>
-                    <td><input type="checkbox" name="flower_name" value="总状花序"></td>
-                </tr>
-            </li>
-        </ul>
-    </div>
-    <div>
-        <input type="submit" value="筛选">
-    </div>
-</form>
+
+</div>
+
+<div id="div_plant_pic" class="quarter-div">
+    fasdfaafa
+</div>
+
+<div id="div_result" class="quarter-div">
+    {% if results is not None %}
+        {% for result in results %}
+            {{ result }}
+        {% endfor %}
+    {% endif %}
+</div>
+
+<div id="div_retrieval" class="quarter-div">
+    dffdfadsj
+</div>
+
+
 </body>
 </html>
